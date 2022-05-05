@@ -67,7 +67,7 @@ class ProxyView: UIView {
         let titleView = UIView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: 34))
         titleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(titleViewDidClick)))
         titleView.isUserInteractionEnabled = true
-        let iconView = UIImageView(image: UIImage(named: "knot"))
+        let iconView = UIImageView(image: UIImage(named: "miniTools"))
         titleView.addSubview(iconView)
         let titleLabel = UILabel()
         titleLabel.text = "Listening Proxy Settings".localized

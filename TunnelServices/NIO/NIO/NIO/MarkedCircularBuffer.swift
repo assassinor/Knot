@@ -129,7 +129,7 @@ public struct MarkedCircularBuffer<Element>: CustomStringConvertible {
     }
 }
 
-extension MarkedCircularBuffer: Collection, MutableCollection {
+extension MarkedCircularBuffer: Collection {
     public typealias RangeType<Bound> = Range<Bound> where Bound: Strideable, Bound.Stride: SignedInteger
     public typealias Index = CircularBuffer<Element>.Index
     public typealias SubSequence = CircularBuffer<Element>

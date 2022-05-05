@@ -18,6 +18,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
 
     open var connection: NWTCPConnection!
     var mitmServer: MitmService!
+    var httpServer: LocalHTTPServer!
     var reachability = try! Reachability()
     
     /// The completion handler to call when the tunnel is fully established.
@@ -65,6 +66,8 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
                     break
                 }
             })
+            httpServer = LocalHTTPServer()
+            httpServer.run()
         }else{
             // 单独启动
             let endpoint = NWHostEndpoint(hostname:"127.0.0.1", port:"8034")
@@ -117,6 +120,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         // TODO:stop server
         if StartInExtension {
             mitmServer.close(completionHandler)
+            httpServer.close()
         }
     }
     

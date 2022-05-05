@@ -21,6 +21,30 @@ let outputFolder = cachesFolder!.appendingPathComponent("output")
 
 class OutputUtil: NSObject {
     
+    static func upload() {
+        DispatchQueue.global().async {
+            guard createFolder(outputFolder) else {
+                return
+            }
+            guard let id = Task.getAllIds().last else {
+                return
+            }
+            let sessions = Task.findAll(taskIds:[id])
+            let har = HAR()
+            for s in sessions { har.append(session: s) }
+            guard let jsonData = try? JSONEncoder().encode(har) else {
+                return;
+            }
+            let fileUrl = outputFolder.appendingPathComponent("history.har")
+            try? jsonData.write(to: fileUrl)
+            // var request = URLRequest(url: URL(string: "http://10.71.201.171/har/upload.php")!)
+            var request = URLRequest(url: URL(string: "http://192.168.10.36/har/upload.php")!)
+            request.httpMethod = "POST"
+            request.allHTTPHeaderFields = ["Content-Type": "application/octet-stream"]
+            URLSession.shared.uploadTask(with: request, fromFile: fileUrl).resume()
+        }
+    }
+    
     static func output(session:Session,type:OutputType,compeleHandle:@escaping ((String?) -> Void)){
 //        if type == .URL {
 //            let url = session.getFullUrl()

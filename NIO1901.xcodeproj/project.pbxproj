@@ -482,6 +482,8 @@
 		56F6A23622AC0984006626B2 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F6A23222AC0984006626B2 /* KeyboardManager.swift */; };
 		76BD4069B5DEA69FE4F9F580 /* Pods_PacketTunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1780182D785E498D13CA110E /* Pods_PacketTunnel.framework */; };
 		B4691E98DF99033F35092394 /* Pods_NIO1901.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BA101E61A6310187327755 /* Pods_NIO1901.framework */; };
+		D789ED4C28F9CA2B001E8199 /* HAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789ED4128F9C65C001E8199 /* HAR.swift */; };
+		D789ED4E28F9CA30001E8199 /* OutputUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789ED4328F9C65C001E8199 /* OutputUtil.swift */; };
 		F27F1CCDEAB554595C667837 /* Pods_TunnelServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37229E5356996334ABDBCD0F /* Pods_TunnelServices.framework */; };
 /* End PBXBuildFile section */
 
@@ -1185,6 +1187,8 @@
 		7BA4F9D1F9BD7E1C68E596AC /* Pods-TunnelServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TunnelServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TunnelServices/Pods-TunnelServices.debug.xcconfig"; sourceTree = "<group>"; };
 		99BAB04DC95D77B60FFFF77E /* Pods-PacketTunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.debug.xcconfig"; sourceTree = "<group>"; };
 		BFE65698155AEF215FFC3F86 /* Pods-NIO1901.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIO1901.release.xcconfig"; path = "Pods/Target Support Files/Pods-NIO1901/Pods-NIO1901.release.xcconfig"; sourceTree = "<group>"; };
+		D789ED4128F9C65C001E8199 /* HAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HAR.swift; sourceTree = "<group>"; };
+		D789ED4328F9C65C001E8199 /* OutputUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputUtil.swift; sourceTree = "<group>"; };
 		E59E2F5FD1342D168E70FB66 /* Pods-PacketTunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.release.xcconfig"; path = "Pods/Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.release.xcconfig"; sourceTree = "<group>"; };
 		FCC24BC318DA421F593C7177 /* Pods-NIO1901.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIO1901.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NIO1901/Pods-NIO1901.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2411,6 +2415,8 @@
 		56F415CA2277122C00AE1554 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D789ED4128F9C65C001E8199 /* HAR.swift */,
+				D789ED4328F9C65C001E8199 /* OutputUtil.swift */,
 				566C76C8227AE36600DA0B9E /* SwiftyJSON.swift */,
 				5621724022926DD800C7581D /* DataCompression.swift */,
 				56F415CB2277122C00AE1554 /* NetRequest.swift */,
@@ -3340,6 +3346,7 @@
 			files = (
 				565A4F5B2277436C00F13CAD /* Session.swift in Sources */,
 				00A9660827913F9B002B9FDA /* ASUtils.swift in Sources */,
+				D789ED4E28F9CA30001E8199 /* OutputUtil.swift in Sources */,
 				56F415E22277122D00AE1554 /* HttpMatcher.swift in Sources */,
 				00A9660F27913F9B002B9FDA /* Types.swift in Sources */,
 				00A9660527913F9B002B9FDA /* ASConfigration.swift in Sources */,
@@ -3379,6 +3386,7 @@
 				5634538A22BCEA780076219D /* HTTPServerHandler.swift in Sources */,
 				00A9660627913F9B002B9FDA /* ASProtocol.swift in Sources */,
 				00A9660C27913F9B002B9FDA /* ASError.swift in Sources */,
+				D789ED4C28F9CA2B001E8199 /* HAR.swift in Sources */,
 				563D168C22B5883E00AC6F5C /* Extension.swift in Sources */,
 				560438ED22853F84007CB3DB /* Data+Extension.swift in Sources */,
 				566C76CB227AE51C00DA0B9E /* Dictionary+Extension.swift in Sources */,
@@ -3620,7 +3628,7 @@
 				CODE_SIGN_ENTITLEMENTS = NIO1901/NIO1901.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73QYWNHB5F;
+				DEVELOPMENT_TEAM = 566UG6DQ7E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -3632,7 +3640,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Lojii.NIO1901;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangchaojie.demo.vpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ENABLE_BATCH_MODE = NO;
@@ -3653,7 +3661,7 @@
 				CODE_SIGN_ENTITLEMENTS = NIO1901/NIO1901.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73QYWNHB5F;
+				DEVELOPMENT_TEAM = 566UG6DQ7E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -3665,7 +3673,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Lojii.NIO1901;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangchaojie.demo.vpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ENABLE_BATCH_MODE = NO;
@@ -3682,7 +3690,7 @@
 				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73QYWNHB5F;
+				DEVELOPMENT_TEAM = 566UG6DQ7E;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/TunnelServices/NIO/CNIOBoringSSL/CNIOBoringSSL/include\"";
 				INFOPLIST_FILE = PacketTunnel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -3691,7 +3699,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Lojii.NIO1901.PacketTunnel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangchaojie.demo.vpn.PacketTunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -3731,10 +3739,10 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 73QYWNHB5F;
+				DEVELOPMENT_TEAM = 566UG6DQ7E;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3747,7 +3755,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lojii.TunnelServices;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangchaojie.demo.vpn.TunnelServices;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -3765,10 +3773,10 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 73QYWNHB5F;
+				DEVELOPMENT_TEAM = 566UG6DQ7E;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3781,7 +3789,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lojii.TunnelServices;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangchaojie.demo.vpn.TunnelServices;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

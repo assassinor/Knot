@@ -207,10 +207,10 @@ public class Rule: ASModel {
     
     public static func defaultRule() -> Rule {
         let rule = Rule()
-        rule.name = "Knot(Default)"
+        rule.name = "miniTools(Default)"
         rule.defaultStrategy = .DIRECT
         rule.defaultBlacklistEnable = true
-        rule.author = "Knot"
+        rule.author = "miniTools"
         rule.createTime = Date().fullSting
         _ = rule.config
         return rule

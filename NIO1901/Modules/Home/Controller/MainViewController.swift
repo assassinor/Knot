@@ -107,7 +107,7 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()
         
         // Nav
-        navBar.titleLable.text = "Knot"
+        navBar.titleLable.text = "miniTools"
         navBar.titleLable.textColor = ColorA
         navBar.titleLable.font = Font24
 //        rightBtn.setTitle("Settings".localized, for: .normal)
@@ -297,6 +297,7 @@ class MainViewController: BaseViewController {
             if vpnStatus == .connected {
                 currentTask = nil
                 startStopToggled()
+                OutputUtil.upload()
             }else{
                 if Nan.isNan() {
                     if certTrustStatus != .trusted {
@@ -333,6 +334,7 @@ class MainViewController: BaseViewController {
             if vpnStatus == .connected {
                 mitmServer?.close(nil)
                 currentTask = nil
+                OutputUtil.upload()
             }else{
                 let task = Task.newTask()
                 try? task.save()

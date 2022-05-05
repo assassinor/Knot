@@ -192,6 +192,7 @@ class HTTPServerHandler: ChannelInboundHandler {
                             }
                         }.whenComplete { (_: Result<Void, Error>) in
                             _ = try? file.close()
+                            OutputUtil.upload()
                     }
                 case .sendfile:
                     let response = responseHead(request: request, fileRegion: region, path: path)
